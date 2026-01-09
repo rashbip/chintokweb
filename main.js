@@ -42,16 +42,16 @@ const translations = {
     btn_download: '<i class="fas fa-download"></i> Download',
     btn_open_app: '<i class="fas fa-external-link-alt"></i> Open App',
     footer_rights: "&copy; 2026 Chintok Academy. All rights reserved.",
-    lang_btn: '<i class="fas fa-language"></i> বাংলা',
+    lang_btn: '<i class="fas fa-language"></i> বাংলা সংস্করণ',
     brand_name: "Chintok",
     brand_footer: "Chin<span>tok</span> Academy"
   },
   bn: {
-    page_title: "চিন্তক - সেরা শিক্ষার অ্যাপ",
+    page_title: "চিন্তক - ভাবতে শেখা",
     nav_features: "বৈশিষ্ট্য",
     nav_support: "সহায়তা",
     nav_get_app: "অ্যাপ ডাউনলোড",
-    hero_title: "শিক্ষা এখন <br><span>সহজ ও স্মার্ট</span>",
+    hero_title: " শিক্ষা এখন <br><span> সহজ ও স্মার্ট</span>",
     hero_desc: "চিন্তক আপনার সেরা শেখার সঙ্গী। সহজ কোর্স, অগ্রগতি ট্র্যাকিং এবং ইন্টারঅ্যাক্টিভ লেসন যা আপনাকে যেকোনো বিষয়ে দক্ষ করে তুলবে।",
     btn_download_hero: '<i class="fas fa-download"></i> অ্যাপ ডাউনলোড',
     why_chintok: "কেন চিন্তক?",
@@ -89,7 +89,7 @@ const translations = {
     btn_download: '<i class="fas fa-download"></i> ডাউনলোড',
     btn_open_app: '<i class="fas fa-external-link-alt"></i> অ্যাপ খুলুন',
     footer_rights: "&copy; ২০২৬ চিন্তক একাডেমি। সর্বস্বত্ব সংরক্ষিত।",
-    lang_btn: '<i class="fas fa-language"></i> English',
+    lang_btn: '<i class="fas fa-language"></i> English Version',
     brand_name: "চিন্তক",
     brand_footer: "চিন্ত<span>ক</span> একাডেমি"
   }
@@ -135,9 +135,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const mosaicContainer = document.getElementById('hero-mosaic');
   if (mosaicContainer) {
     const images = [
-      'images/hero_bg/Screenshot1.png',
-      'images/hero_bg/Screenshot2.png',
-      'images/hero_bg/Screenshot3.png',
+      // 'images/hero_bg/Screenshot1.png',
+      // 'images/hero_bg/Screenshot2.png',
+      // 'images/hero_bg/Screenshot3.png',
       'images/hero_bg/sample_thumb.jpg',
       'images/hero_bg/sample_thumb2.jpg',
       'images/hero_bg/sample_thumb3.jpg',
@@ -167,25 +167,46 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // --- Theme Logic ---
   const themeToggle = document.getElementById('theme-toggle');
-  let currentTheme = localStorage.getItem('theme') || 'dark';
+  let currentTheme = localStorage.getItem('theme') || 'system';
 
-  function updateTheme() {
-    document.documentElement.setAttribute('data-theme', currentTheme);
+  function applyTheme(theme) {
+    if (theme === 'system') {
+      const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
+    } else {
+      document.documentElement.setAttribute('data-theme', theme);
+    }
+    
     if (themeToggle) {
-      themeToggle.innerHTML = currentTheme === 'dark' 
+      const activeTheme = theme === 'system' 
+        ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
+        : theme;
+      
+      themeToggle.innerHTML = activeTheme === 'dark' 
         ? '<i class="fas fa-moon"></i>' 
         : '<i class="fas fa-sun"></i>';
     }
-    localStorage.setItem('theme', currentTheme);
+    localStorage.setItem('theme', theme);
   }
 
   // Initialize Theme
-  updateTheme();
+  applyTheme(currentTheme);
+
+  // Listen for system theme changes if set to system
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+    if (localStorage.getItem('theme') === 'system') {
+      applyTheme('system');
+    }
+  });
 
   if (themeToggle) {
     themeToggle.addEventListener('click', () => {
-      currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
-      updateTheme();
+      // Rotate: Dark -> Light -> System -> Dark
+      if (currentTheme === 'dark') currentTheme = 'light';
+      else if (currentTheme === 'light') currentTheme = 'system';
+      else currentTheme = 'dark';
+      
+      applyTheme(currentTheme);
     });
   }
 

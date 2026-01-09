@@ -255,8 +255,8 @@ nav a.active {
   width: 300px;
   height: 600px;
   background: var(--bg-secondary);
-  border-radius: 40px;
-  border: 8px solid #333;
+  border-radius: 30px; /* Reduced from 40px for a more modern look */
+  border: 8px solid #333; /* Slightly thicker and lighter for visibility */
   position: relative;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
   overflow: hidden;
@@ -345,11 +345,11 @@ nav a.active {
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 120px;
-  height: 25px;
-  background: #333;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
+  width: 100px; /* Slimmed down */
+  height: 20px; /* Slimmed down */
+  background: #333; /* Match bezel */
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
   z-index: 10;
 }
 
@@ -767,15 +767,40 @@ footer {
     font-size: 2.2rem;
   }
 
+  .hero-visual {
+    width: 100%;
+    min-height: 500px; /* Increased to accommodate larger phones */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 20px;
+  }
+
   .phone-mockup {
-    width: 240px;
-    height: 480px;
-    transform: rotate(-2deg) translateY(-10px);
+    width: 220px; /* Increased from 180px */
+    height: 440px; /* Adjusted height */
+    border-radius: 25px;
+    border-width: 5px;
+    transform: none;
+    z-index: 2;
+    position: relative;
+  }
+
+  .notch {
+    width: 80px;
+    height: 16px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
   }
 
   .phone-mockup.back {
-    right: 10px;
-    transform: rotate(2deg) scale(0.9);
+    position: absolute;
+    display: block;
+    left: 50%; /* Center start */
+    top: 50%;
+    transform: translate(-10%, -45%) scale(0.9) rotate(8deg); /* Adjusted for better overlap */
+    z-index: 1;
     opacity: 0.5;
   }
 
@@ -808,13 +833,13 @@ footer {
 }
 
 @media (max-width: 380px) {
-  .phone-mockup.back {
-    display: none;
-  }
-
   .phone-mockup {
-    margin: 0 auto;
-    transform: none;
+    width: 190px;
+    height: 380px;
+  }
+  
+  .hero-visual {
+    min-height: 420px;
   }
 
   .hero-title {

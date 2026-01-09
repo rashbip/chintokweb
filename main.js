@@ -165,6 +165,30 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  // --- Theme Logic ---
+  const themeToggle = document.getElementById('theme-toggle');
+  let currentTheme = localStorage.getItem('theme') || 'dark';
+
+  function updateTheme() {
+    document.documentElement.setAttribute('data-theme', currentTheme);
+    if (themeToggle) {
+      themeToggle.innerHTML = currentTheme === 'dark' 
+        ? '<i class="fas fa-moon"></i>' 
+        : '<i class="fas fa-sun"></i>';
+    }
+    localStorage.setItem('theme', currentTheme);
+  }
+
+  // Initialize Theme
+  updateTheme();
+
+  if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+      currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      updateTheme();
+    });
+  }
+
   // --- Translation Logic ---
   const langToggle = document.getElementById('lang-toggle');
   

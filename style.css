@@ -25,6 +25,10 @@ body {
   line-height: 1.6;
 }
 
+body:lang(bn) {
+  font-family: "Tiro Bangla", serif;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -64,9 +68,11 @@ header {
   gap: 10px;
 }
 
-.logo i {
-  color: var(--primary);
-  font-size: 1.5rem;
+.logo img {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px; /* Optional rounded corners */
+  object-fit: contain;
 }
 
 nav ul {
@@ -139,7 +145,7 @@ nav a.active {
 .hero-title {
   font-size: 4rem;
   font-weight: 800;
-  line-height: 1.1;
+  line-height: 1.3;
   margin-bottom: 20px;
   background: linear-gradient(to right, #fff, #cecece);
   -webkit-background-clip: text;

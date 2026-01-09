@@ -95,7 +95,7 @@ const translations = {
   }
 };
 
-let currentLang = 'bn'; // Default to Bangla
+let currentLang = 'en'; // Default to English
 
 document.addEventListener("DOMContentLoaded", () => {
   // --- Device Detection Logic ---

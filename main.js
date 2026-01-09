@@ -5,7 +5,7 @@ const translations = {
     nav_support: "Support",
     nav_get_app: "Get App",
     hero_title: "Learning Made <br><span>Simple & Smart</span>",
-    hero_desc: "Chintok is your all-in-one learning companion. Streamlined courses, progress tracking, and interactive lessons designed to help you master any subject.",
+    hero_desc: "Tired of struggling with disorganized study materials? Your search ends right right here! Chintok is your personal learning companion, delivering the best educational experience directly to you.",
     btn_download_hero: '<i class="fas fa-download"></i> Download App',
     why_chintok: "Why Chintok?",
     why_subtitle: "Experience a new way of learning with features designed to help you succeed.",
@@ -131,6 +131,39 @@ document.addEventListener("DOMContentLoaded", () => {
     targetCard.classList.add("recommended");
   }
 
+  // --- Hero Mosaic Generation ---
+  const mosaicContainer = document.getElementById('hero-mosaic');
+  if (mosaicContainer) {
+    const images = [
+      'images/hero_bg/Screenshot1.png',
+      'images/hero_bg/Screenshot2.png',
+      'images/hero_bg/Screenshot3.png',
+      'images/hero_bg/sample_thumb.jpg',
+      'images/hero_bg/sample_thumb2.jpg',
+      'images/hero_bg/sample_thumb3.jpg',
+      'images/hero_bg/sample_thumb4.jpg',
+      'images/hero_bg/sample_thumb5.jpg',
+      'images/hero_bg/sample_thumb6.jpg'
+    ];
+
+    // Create 4 rows
+    for (let r = 0; r < 4; r++) {
+      const row = document.createElement('div');
+      row.className = `mosaic-row ${r % 2 === 0 ? 'forward' : 'backward'}`;
+      
+      // Duplicate images to ensure seamless loop
+      const rowImages = [...images, ...images, ...images]; 
+      
+      rowImages.forEach(imgSrc => {
+        const item = document.createElement('div');
+        item.className = 'mosaic-item';
+        item.style.backgroundImage = `url('${imgSrc}')`;
+        row.appendChild(item);
+      });
+      
+      mosaicContainer.appendChild(row);
+    }
+  }
 
   // --- Translation Logic ---
   const langToggle = document.getElementById('lang-toggle');

@@ -31,13 +31,28 @@
   .hero-visual {
     width: 100%;
     height: auto;
-    min-height: 500px;
+    min-height: 650px;
     overflow: visible;
   }
 
   .phone-mockup {
     width: 300px;
     height: 600px;
+    transform: rotate(-4deg);
+    margin: 0;
+    z-index: 2;
+    position: relative;
+  }
+
+  .phone-mockup.back {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-15%, -45%) rotate(8deg) scale(0.92);
+    z-index: 1;
+    opacity: 0.5;
+    filter: blur(2px);
   }
 }
 
@@ -97,7 +112,8 @@
   }
 
   .hero {
-    padding-top: 180px;
+    padding-top: 140px;
+    padding-bottom: 40px;
   }
 
   .hero-title {
@@ -106,39 +122,34 @@
 
   .hero-visual {
     width: 100%;
-    min-height: 500px;
+    min-height: 550px;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    margin-top: 20px;
+    margin-top: 30px;
   }
 
   .phone-mockup {
-    width: 220px;
-    height: 440px;
-    border-radius: 25px;
-    border-width: 5px;
-    transform: none;
+    width: 240px;
+    height: 480px;
+    border-radius: 30px;
+    border-width: 8px;
+    transform: rotate(-4deg);
     z-index: 2;
     position: relative;
-  }
-
-  .notch {
-    width: 80px;
-    height: 16px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    margin: 0;
   }
 
   .phone-mockup.back {
-    position: absolute;
     display: block;
-    left: 50%;
+    position: absolute;
     top: 50%;
-    transform: translate(-10%, -45%) scale(0.9) rotate(8deg);
+    left: 50%;
+    transform: translate(-15%, -45%) rotate(8deg) scale(0.92);
     z-index: 1;
     opacity: 0.5;
+    filter: blur(1px);
   }
 
   .download-grid {
@@ -184,7 +195,3 @@
   }
 }
 
-@keyframes swing {
-  0%, 100% { transform: rotate(-10deg); }
-  50% { transform: rotate(10deg); }
-}

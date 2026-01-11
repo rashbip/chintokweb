@@ -1,0 +1,75 @@
+:root {
+  --bg-primary: #14151a;
+  --bg-secondary: #1f2128;
+  --bg-card: #23252e;
+  --primary: #ff334b;
+  --primary-hover: #d62238;
+  --text-main: #ffffff;
+  --text-muted: #a0a0a0;
+  --nav-height: 80px;
+  --transition: all 0.3s ease;
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --header-bg: rgba(20, 21, 26, 0.85);
+  --hero-overlay: linear-gradient(90deg, rgba(20, 21, 26, 0.95) 0%, rgba(20, 21, 26, 0.7) 40%, rgba(20, 21, 26, 0.8) 100%);
+  --hero-title-gradient: linear-gradient(135deg, #ffffff 0%, #ff334b 100%);
+  --section-title-gradient: linear-gradient(135deg, #ffffff 0%, #ff334b 50%, #ffffff 100%);
+  --btn-secondary-bg: #1f2128;
+  --btn-secondary-text: #ffffff;
+}
+
+[data-theme="light"] {
+  --bg-primary: #f8f9fa;
+  --bg-secondary: #ffffff;
+  --bg-card: #ffffff;
+  --text-main: #1a1a1a;
+  --text-muted: #666666;
+  --glass-bg: rgba(0, 0, 0, 0.03);
+  --glass-border: rgba(0, 0, 0, 0.08);
+  --header-bg: rgba(248, 249, 250, 0.85);
+  --hero-overlay: linear-gradient(90deg, rgba(248, 249, 250, 0.95) 0%, rgba(248, 249, 250, 0.7) 40%, rgba(248, 249, 250, 0.8) 100%);
+  --hero-title-gradient: linear-gradient(135deg, #1a1a1a 0%, #ff334b 100%);
+  --section-title-gradient: linear-gradient(135deg, #1a1a1a 0%, #ff334b 50%, #1a1a1a 100%);
+  --btn-secondary-bg: #eef0f2;
+  --btn-secondary-text: #1a1a1a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+body:lang(bn) {
+  font-family: "Tiro Bangla", serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+}
+
+@keyframes swing {
+  0%, 100% { transform: rotate(-10deg); }
+  50% { transform: rotate(10deg); }
+}
+

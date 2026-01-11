@@ -1,0 +1,165 @@
+/* --- Hero Section --- */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 120px 5% 50px;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--bg-primary);
+  z-index: 1;
+}
+
+.hero-mosaic {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 0;
+  opacity: 0.35;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.mosaic-row {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+}
+
+.mosaic-row.forward {
+  animation: scrollForward 80s linear infinite;
+}
+
+.mosaic-row.backward {
+  animation: scrollBackward 80s linear infinite;
+}
+
+@keyframes scrollForward {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-50% - 10px)); }
+}
+
+@keyframes scrollBackward {
+  0% { transform: translateX(calc(-50% - 10px)); }
+  100% { transform: translateX(0); }
+}
+
+.mosaic-item {
+  width: 180px;
+  height: 260px;
+  border-radius: 12px;
+  background-size: cover;
+  background-position: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+  border: 1px solid rgba(255,255,255,0.05);
+  filter: grayscale(1) brightness(1.2);
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--hero-overlay);
+  z-index: -1;
+}
+
+.hero-content {
+  max-width: 50%;
+  z-index: 10;
+}
+
+.hero-title {
+  font-size: 4rem;
+  font-weight: 800;
+  line-height: 1.4;
+  margin-bottom: 20px;
+  background: var(--hero-title-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-title span {
+  color: var(--primary);
+  -webkit-text-fill-color: var(--primary);
+}
+
+.hero-desc {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  margin-bottom: 40px;
+  max-width: 90%;
+}
+
+.hero-visual {
+  position: relative;
+  width: 45%;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* --- Features Section --- */
+.features {
+  padding: 100px 5%;
+  background: var(--bg-primary);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  background: var(--section-title-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.section-subtitle {
+  font-size: 1rem;
+  color: var(--text-muted);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+/* --- Download Section --- */
+.download {
+  padding: 100px 5%;
+  background: linear-gradient(
+    180deg,
+    var(--bg-primary) 0%,
+    rgba(255, 51, 75, 0.05) 100%
+  );
+}
+
+.download-grid {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 20px;
+  margin-top: 60px;
+  flex-wrap: wrap;
+}

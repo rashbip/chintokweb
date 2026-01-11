@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - চিন্তক Academy</title>
+    <link rel="icon" type="image/png" sizes="192x192" href="images/icons/Icon-192.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Tiro+Bangla&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Core Styles -->
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/auth.css" />
+</head>
+<body class="dark-theme">
+    <div class="auth-container">
+        <div class="blur-circle blur-circle-1"></div>
+        <div class="blur-circle blur-circle-2"></div>
+
+        <div class="auth-card">
+            <div class="auth-header">
+                <a href="index.html">
+                    <img src="images/icons/Icon-192.png" alt="Chintok Logo" class="auth-logo">
+                </a>
+                <h1 class="auth-title" data-i18n="login_title">ফিরে আসায় স্বাগতম</h1>
+                <p class="auth-subtitle" data-i18n="login_subtitle">আপনার অ্যাকাউন্টে লগইন করুন</p>
+            </div>
+
+            <form id="login-form">
+                <div class="form-group">
+                    <label class="form-label" for="email" data-i18n="label_email">ইমেইল ঠিকানা</label>
+                    <div class="input-wrapper">
+                        <input type="email" id="email" class="form-input" placeholder="example@mail.com" data-i18n-placeholder="placeholder_email" required>
+                        <i class="fas fa-envelope input-icon"></i>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="password" data-i18n="label_password">পাসওয়ার্ড</label>
+                    <div class="input-wrapper">
+                        <input type="password" id="password" class="form-input" placeholder="••••••••" required>
+                        <i class="fas fa-lock input-icon"></i>
+                        <i class="fas fa-eye password-toggle" id="password-toggle"></i>
+                    </div>
+                </div>
+
+                <div class="form-footer">
+                    <label class="remember-me">
+                        <input type="checkbox">
+                        <span data-i18n="remember_me">মনে রাখুন</span>
+                    </label>
+                    <a href="#" class="forgot-password" data-i18n="forgot_password">পাসওয়ার্ড ভুলে গেছেন?</a>
+                </div>
+
+                <button type="submit" class="btn-auth" data-i18n="btn_login">লগইন</button>
+            </form>
+
+            <div class="separator" data-i18n="or_with">অথবা</div>
+
+            <button class="btn-google">
+                <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google">
+                <span data-i18n="btn_google">গুগল দিয়ে লগইন</span>
+            </button>
+
+            <div class="auth-footer-link">
+                <span data-i18n="dont_have_acc">অ্যাকাউন্ট নেই?</span> 
+                <a href="signup.html" data-i18n="link_signup">নতুন অ্যাকাউন্ট খুলুন</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Theme/Lang Controls -->
+    <div class="floating-controls">
+        <button id="theme-toggle" class="theme-toggle" title="Toggle Theme">
+            <i class="fas fa-moon"></i>
+        </button>
+        <button id="lang-toggle" class="lang-toggle">
+            <i class="fas fa-language"></i> English
+        </button>
+    </div>
+
+    <!-- Core Scripts -->
+    <script src="js/translations.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/i18n.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const passwordInput = document.getElementById('password');
+            const toggleBtn = document.getElementById('password-toggle');
+            
+            if (toggleBtn && passwordInput) {
+                toggleBtn.addEventListener('click', () => {
+                    const type = passwordInput.type === 'password' ? 'text' : 'password';
+                    passwordInput.type = type;
+                    toggleBtn.className = type === 'password' ? 'fas fa-eye password-toggle' : 'fas fa-eye-slash password-toggle';
+                });
+            }
+        });
+    </script>
+</body>
+</html>

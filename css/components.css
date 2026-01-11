@@ -52,6 +52,28 @@
   font-size: 1.1rem;
   transition: var(--transition);
   box-shadow: 0 10px 30px rgba(255, 51, 75, 0.4);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: 0.5s;
+}
+
+.btn-primary:hover::before {
+  left: 100%;
 }
 
 .btn-primary:hover {
@@ -93,6 +115,12 @@
   overflow: hidden;
   transform: rotate(-4deg);
   z-index: 2;
+  animation: floatMain 6s ease-in-out infinite;
+}
+
+@keyframes floatMain {
+  0%, 100% { transform: rotate(-4deg) translateY(0); }
+  50% { transform: rotate(-4deg) translateY(-20px); }
 }
 
 .screen {
@@ -118,6 +146,12 @@
   z-index: 1;
   opacity: 0.5;
   filter: blur(2px);
+  animation: floatBack 8s ease-in-out infinite;
+}
+
+@keyframes floatBack {
+  0%, 100% { transform: translate(-15%, -45%) rotate(8deg) scale(0.92) translateY(0); }
+  50% { transform: translate(-15%, -45%) rotate(8deg) scale(0.92) translateY(15px); }
 }
 
 
@@ -148,9 +182,10 @@
 }
 
 .feature-card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-10px) scale(1.02);
   background: var(--bg-secondary);
-  border-color: rgba(255, 51, 75, 0.2);
+  border-color: rgba(255, 51, 75, 0.4);
+  box-shadow: 0 15px 35px rgba(255, 51, 75, 0.1);
 }
 
 .feature-icon {

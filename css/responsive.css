@@ -91,6 +91,17 @@
   .construction-icon {
     font-size: 4rem;
   }
+
+  /* Stats Section Responsive */
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 30px 20px;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+  }
 }
 
 @media (max-width: 600px) {
@@ -192,6 +203,12 @@
 
   .hero-title {
     font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
   }
 }
 

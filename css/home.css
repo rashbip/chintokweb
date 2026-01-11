@@ -77,6 +77,12 @@
 .hero-content {
   max-width: 50%;
   z-index: 10;
+  animation: slideUp 1s ease-out;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .hero-title {
@@ -100,6 +106,7 @@
   color: var(--text-muted);
   margin-bottom: 40px;
   max-width: 90%;
+  animation: slideUp 1s ease-out 0.2s backwards;
 }
 
 .hero-visual {
@@ -109,6 +116,52 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  animation: slideUp 1s ease-out 0.4s backwards;
+}
+
+/* --- Stats Section --- */
+.stats-section {
+  padding: 60px 5%;
+  background: var(--bg-primary);
+  position: relative;
+  z-index: 5;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  background: var(--bg-card);
+  padding: 40px;
+  border-radius: 30px;
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(20px);
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--primary);
+  background: var(--hero-title-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
 }
 
 /* --- Features Section --- */

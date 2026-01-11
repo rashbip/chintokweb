@@ -31,7 +31,13 @@
     <link rel="stylesheet" href="css/home.css" />
     <link rel="stylesheet" href="css/responsive.css" />
   </head>
-  <body>
+  <body class="dark-theme">
+    <div class="bg-glow-container">
+      <div class="glow-circle glow-circle-1"></div>
+      <div class="glow-circle glow-circle-2"></div>
+      <div class="glow-circle glow-circle-3"></div>
+    </div>
+
     <header>
       <a href="#" class="logo">
         <img src="images/icons/Icon-192.png" alt="Chintok Logo">
@@ -83,8 +89,29 @@
       </div>
     </section>
 
+    <div class="stats-section reveal">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <span class="stat-number">100K+</span>
+          <span class="stat-label">Students</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">50+</span>
+          <span class="stat-label">Courses</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">4.9/5</span>
+          <span class="stat-label">Rating</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">24/7</span>
+          <span class="stat-label">Support</span>
+        </div>
+      </div>
+    </div>
+
     <section id="features" class="features">
-      <div class="section-header">
+      <div class="section-header reveal">
         <h2 class="section-title" data-i18n="why_chintok">কেন চিন্তক?</h2>
         <p class="section-subtitle" data-i18n="why_subtitle">
             সাফল্যের জন্য ডিজাইন করা বৈশিষ্ট্যগুলির সাথে শেখার এক নতুন অভিজ্ঞতা পান।
@@ -92,7 +119,7 @@
       </div>
 
       <div class="features-grid">
-        <div class="feature-card">
+        <div class="feature-card reveal reveal-delay-1">
           <div class="feature-icon">
             <i class="fas fa-video"></i>
           </div>
@@ -101,7 +128,7 @@
             Learn from top educators through high-quality video lessons and engaging 3D animations.
           </p>
         </div>
-        <div class="feature-card">
+        <div class="feature-card reveal reveal-delay-2">
           <div class="feature-icon">
             <i class="fas fa-book-open"></i>
           </div>
@@ -110,7 +137,7 @@
             Access all your textbooks, practice materials, and handwritten notes in one organized place.
           </p>
         </div>
-        <div class="feature-card">
+        <div class="feature-card reveal reveal-delay-3">
           <div class="feature-icon">
             <i class="fas fa-flask"></i>
           </div>
@@ -119,7 +146,7 @@
             Participate in live lab sessions and regular exam sessions to test your knowledge.
           </p>
         </div>
-        <div class="feature-card">
+        <div class="feature-card reveal reveal-delay-1">
           <div class="feature-icon">
             <i class="fas fa-th-large"></i>
           </div>
@@ -128,7 +155,7 @@
             Track your courses, daily goals, and progress summary with a data-driven personal cockpit.
           </p>
         </div>
-        <div class="feature-card">
+        <div class="feature-card reveal reveal-delay-2">
           <div class="feature-icon">
             <i class="fas fa-chart-line"></i>
           </div>
@@ -137,7 +164,7 @@
             Get deep insights into your practice consistency, difficulty levels, and areas needing revision.
           </p>
         </div>
-        <div class="feature-card">
+        <div class="feature-card reveal reveal-delay-3">
           <div class="feature-icon">
             <i class="fas fa-lightbulb"></i>
           </div>
@@ -150,7 +177,7 @@
     </section>
 
     <section id="download" class="download">
-      <div class="section-header">
+      <div class="section-header reveal">
         <h2 class="section-title" data-i18n="get_app_title">অ্যাপটি ডাউনলোড করুন</h2>
         <p class="section-subtitle" data-i18n="get_app_subtitle">
             আপনার প্ল্যাটফর্মটি বেছে নিন এবং আজই আপনার শেখার যাত্রা শুরু করুন।
@@ -159,7 +186,7 @@
 
       <div class="download-grid">
         <!-- Android -->
-        <div class="download-card" id="card-android">
+        <div class="download-card reveal reveal-delay-1" id="card-android">
           <div class="rec-badge" data-i18n="rec_badge">প্রস্তাবিত</div>
           <i class="fab fa-android device-icon"></i>
           <h3 data-i18n="dev_android">অ্যান্ড্রয়েড</h3>
@@ -170,7 +197,7 @@
         </div>
 
         <!-- iOS -->
-        <div class="download-card" id="card-ios">
+        <div class="download-card reveal reveal-delay-2" id="card-ios">
             <div class="rec-badge" data-i18n="rec_badge">প্রস্তাবিত</div>
             <i class="fab fa-app-store-ios device-icon"></i>
             <h3 data-i18n="dev_ios">আইওএস</h3>
@@ -180,7 +207,7 @@
             >
         </div>
          <!-- Web -->
-        <div class="download-card" id="card-web">
+        <div class="download-card reveal reveal-delay-3" id="card-web">
           <div class="rec-badge" data-i18n="instant_badge">তাৎক্ষণিক প্রবেশ</div>
           <i class="fas fa-globe device-icon"></i>
           <h3 data-i18n="dev_web">ওয়েব অ্যাপ</h3>
@@ -196,7 +223,7 @@
         </div>
 
         <!-- Windows -->
-        <div class="download-card" id="card-windows">
+        <div class="download-card reveal reveal-delay-1" id="card-windows">
           <div class="rec-badge" data-i18n="rec_badge">প্রস্তাবিত</div>
           <i class="fab fa-windows device-icon"></i>
           <h3 data-i18n="dev_windows">উইন্ডোজ</h3>
@@ -207,7 +234,7 @@
         </div>
 
         <!-- Mac -->
-        <div class="download-card" id="card-mac">
+        <div class="download-card reveal reveal-delay-2" id="card-mac">
           <div class="rec-badge" data-i18n="rec_badge">প্রস্তাবিত</div>
           <i class="fab fa-apple device-icon"></i>
           <h3 data-i18n="dev_mac">ম্যাক</h3>
@@ -218,7 +245,7 @@
         </div>
 
         <!-- Linux -->
-        <div class="download-card" id="card-linux">
+        <div class="download-card reveal reveal-delay-3" id="card-linux">
           <div class="rec-badge" data-i18n="rec_badge">প্রস্তাবিত</div>
           <i class="fab fa-linux device-icon"></i>
           <h3 data-i18n="dev_linux">লিনাক্স</h3>
@@ -229,7 +256,7 @@
         </div>
 
         <!-- Android TV -->
-        <div class="download-card" id="card-tv">
+        <div class="download-card reveal reveal-delay-1" id="card-tv">
             <div class="rec-badge" data-i18n="rec_badge">প্রস্তাবিত</div>
             <i class="fas fa-tv device-icon"></i>
             <h3 data-i18n="dev_tv">অ্যান্ড্রয়েড টিভি</h3>

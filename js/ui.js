@@ -91,9 +91,15 @@ function initUI() {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('active');
+            } else {
+                // If you want it to re-animate every time you scroll back:
+                entry.target.classList.remove('active');
             }
         });
-    }, { threshold: 0.1 });
+    }, { 
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px' // Trigger slightly before it enters fully
+    });
 
     revealElements.forEach(el => revealObserver.observe(el));
 }

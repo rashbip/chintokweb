@@ -76,7 +76,73 @@ const translations = {
     privacy_title: "Privacy Policy",
     terms_title: "Terms of Service",
     policy_last_updated: "Last Updated: January 2026",
-    back_to_home: "Back to Home"
+    back_to_home: "Back to Home",
+    privacy_content: `
+      <div class="policy-section">
+        <h2>1. Introduction</h2>
+        <p>Welcome to Chintok Academy. We respect your privacy and are committed to protecting your personal data. This privacy policy will inform you as to how we look after your personal data when you visit our website or use our application and tell you about your privacy rights and how the law protects you.</p>
+      </div>
+
+      <div class="policy-section">
+        <h2>2. Information We Collect</h2>
+        <h3>Personal Data</h3>
+        <p>While using our Service, we may ask you to provide us with certain personally identifiable information that can be used to contact or identify you. Personally identifiable information may include, but is not limited to: Email address, First name and last name, Phone number, Address, Usage Data.</p>
+
+        <h3>Usage Data</h3>
+        <p>Usage Data is collected automatically when using the Service. It may include information such as Your Device's IP address, browser type, browser version, the pages of our Service that You visit, the time and date of Your visit, the time spent on those pages, and other diagnostic data.</p>
+      </div>
+
+      <div class="policy-section">
+        <h2>3. Tracking Technologies and Cookies</h2>
+        <p>We use Cookies and similar tracking technologies to track the activity on Our Service and store certain information. You can instruct Your browser to refuse all Cookies, however, some parts of our Service may not be accessible.</p>
+      </div>
+
+      <div class="policy-section">
+        <h2>4. Use of Your Personal Data</h2>
+        <p>The Company may use Personal Data to provide and maintain our Service, manage Your Account, contact You with news/offers, and for the performance of contracts.</p>
+      </div>
+
+      <div class="policy-section">
+        <h2>5. Security of Your Personal Data</h2>
+        <p>The security of Your Personal Data is important to Us, but remember that no method of transmission over the Internet is 100% secure. We strive to use commercially acceptable means to protect Your Personal Data.</p>
+      </div>
+
+      <div class="policy-section">
+        <h2>6. Contact Us</h2>
+        <p>If you have any questions about this Privacy Policy, You can contact us at chintokedu@gmail.com.</p>
+      </div>
+    `,
+    terms_content: `
+      <div class="policy-section">
+        <h2>1. Introduction</h2>
+        <p>Welcome to Chintok Academy. By accessing or using the Service, you agree to be bound by these Terms. If you disagree with any part of the terms, then you may not access the Service.</p>
+      </div>
+
+      <div class="policy-section">
+        <h2>2. Accounts</h2>
+        <p>When you create an account with us, you must provide us information that is accurate, complete, and current at all times. You are responsible for safeguarding your password.</p>
+      </div>
+
+      <div class="policy-section">
+        <h2>3. Intellectual Property</h2>
+        <p>The Service and its original content, features and functionality are and will remain the exclusive property of Chintok Academy and its licensors.</p>
+      </div>
+
+      <div class="policy-section">
+        <h2>4. Termination</h2>
+        <p>We may terminate or suspend your account immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach the Terms.</p>
+      </div>
+
+      <div class="policy-section">
+        <h2>5. Limitation Of Liability</h2>
+        <p>In no event shall Chintok Academy be liable for any indirect, incidental, special, consequential or punitive damages resulting from your use of the service.</p>
+      </div>
+
+      <div class="policy-section">
+        <h2>6. Governing Law</h2>
+        <p>These Terms shall be governed and construed in accordance with the laws of Bangladesh.</p>
+      </div>
+    `
   },
   bn: {
     page_title: "চিন্তক - ভাবতে শেখা",
@@ -155,6 +221,72 @@ const translations = {
     privacy_title: "প্রাইভেসি পলিসি",
     terms_title: "ব্যবহারের শর্তাবলী",
     policy_last_updated: "সর্বশেষ আপডেট: জানুয়ারি ২০২৬",
-    back_to_home: "হোম পেজে ফিরে যান"
+    back_to_home: "হোম পেজে ফিরে যান",
+    privacy_content: `
+      <div class="policy-section">
+        <h2>১. ভূমিকা</h2>
+        <p>চিন্তক একাডেমিতে আপনাকে স্বাগতম। আমরা আপনার গোপনীয়তাকে সম্মান করি এবং আপনার ব্যক্তিগত তথ্য সুরক্ষিত রাখতে প্রতিশ্রুতিবদ্ধ। এই প্রাইভেসি পলিসি আপনাকে জানাবে যে আপনি যখন আমাদের ওয়েবসাইট ভিজিট করেন বা আমাদের অ্যাপ্লিকেশন ব্যবহার করেন তখন আমরা কীভাবে আপনার ব্যক্তিগত তথ্যের দেখাশোনা করি এবং আপনার গোপনীয়তার অধিকার সম্পর্কে আপনাকে জানাব।</p>
+      </div>
+
+      <div class="policy-section">
+        <h2>২. আমরা যে তথ্য সংগ্রহ করি</h2>
+        <h3>ব্যক্তিগত তথ্য</h3>
+        <p>আমাদের পরিষেবা ব্যবহার করার সময়, আমরা আপনাকে আমাদের কিছু ব্যক্তিগতভাবে শনাক্তযোগ্য তথ্য প্রদান করতে বলতে পারি যা আপনার সাথে যোগাযোগ করতে বা আপনাকে শনাক্ত করতে ব্যবহার করা যেতে পারে। ব্যক্তিগতভাবে শনাক্তযোগ্য তথ্যের মধ্যে থাকতে পারে: ইমেল ঠিকানা, প্রথম নাম এবং শেষ নাম, ফোন নম্বর, ঠিকানা, ব্যবহারের তথ্য (Usage Data)।</p>
+
+        <h3>ব্যবহারের তথ্য (Usage Data)</h3>
+        <p>পরিষেবা ব্যবহার করার সময় ব্যবহারের তথ্য স্বয়ংক্রিয়ভাবে সংগ্রহ করা হয়। এতে আপনার ডিভাইসের আইপি (IP) ঠিকানা, ব্রাউজারের ধরন, ব্রাউজার সংস্করণ, আপনি আমাদের পরিষেবার যে পৃষ্ঠাগুলি ভিজিট করেন, আপনার ভিজিটের সময় এবং তারিখ, সেই পৃষ্ঠাগুলিতে ব্যয় করা সময় এবং অন্যান্য ডায়াগনস্টিক ডেটার মতো তথ্য অন্তর্ভুক্ত থাকতে পারে।</p>
+      </div>
+
+      <div class="policy-section">
+        <h2>৩. ট্র্যাকিং প্রযুক্তি এবং কুকিজ</h2>
+        <p>আমরা আমাদের পরিষেবার কার্যক্রম ট্র্যাক করতে এবং নির্দিষ্ট তথ্য সংরক্ষণ করতে কুকিজ এবং অনুরূপ ট্র্যাকিং প্রযুক্তি ব্যবহার করি। আপনি আপনার ব্রাউজারকে সমস্ত কুকি প্রত্যাখ্যান করার নির্দেশ দিতে পারেন, তবে আমাদের পরিষেবার কিছু অংশ অ্যাক্সেসযোগ্য নাও হতে পারে।</p>
+      </div>
+
+      <div class="policy-section">
+        <h2>৪. আপনার ব্যক্তিগত তথ্যের ব্যবহার</h2>
+        <p>কোম্পানি আমাদের পরিষেবা প্রদান এবং রক্ষণাবেক্ষণ করতে, আপনার অ্যাকাউন্ট পরিচালনা করতে, সংবাদ/অফার সহ আপনার সাথে যোগাযোগ করতে এবং চুক্তির কার্য সম্পাদনের জন্য ব্যক্তিগত তথ্য ব্যবহার করতে পারে।</p>
+      </div>
+
+      <div class="policy-section">
+        <h2>৫. আপনার ব্যক্তিগত তথ্যের নিরাপত্তা</h2>
+        <p>আপনার ব্যক্তিগত তথ্যের নিরাপত্তা আমাদের কাছে গুরুত্বপূর্ণ, তবে মনে রাখবেন যে ইন্টারনেটের মাধ্যমে প্রেরণের কোনো পদ্ধতি ১০০% নিরাপদ নয়। আমরা আপনার ব্যক্তিগত তথ্য রক্ষা করার জন্য বাণিজ্যিকভাবে গ্রহণযোগ্য মাধ্যম ব্যবহার করার চেষ্টা করি।</p>
+      </div>
+
+      <div class="policy-section">
+        <h2>৬. আমাদের সাথে যোগাযোগ করুন</h2>
+        <p>এই প্রাইভেসি পলিসি সম্পর্কে আপনার কোনো প্রশ্ন থাকলে, আপনি আমাদের সাথে chintokedu@gmail.com এ যোগাযোগ করতে পারেন।</p>
+      </div>
+    `,
+    terms_content: `
+      <div class="policy-section">
+        <h2>১. ভূমিকা</h2>
+        <p>চিন্তক একাডেমিতে আপনাকে স্বাগতম। পরিষেবাটি অ্যাক্সেস বা ব্যবহার করার মাধ্যমে, আপনি এই শর্তাবলী দ্বারা আবদ্ধ হতে সম্মত হন। আপনি যদি শর্তাবলীর কোনো অংশের সাথে একমত না হন, তবে আপনি পরিষেবাটি অ্যাক্সেস করতে পারবেন না।</p>
+      </div>
+
+      <div class="policy-section">
+        <h2>২. অ্যাকাউন্ট</h2>
+        <p>আপনি যখন আমাদের সাথে একটি অ্যাকাউন্ট তৈরি করেন, তখন আপনাকে অবশ্যই আমাদের এমন তথ্য প্রদান করতে হবে যা সর্বদা সঠিক, সম্পূর্ণ এবং বর্তমান। আপনার পাসওয়ার্ড সুরক্ষিত রাখার দায়িত্ব আপনার।</p>
+      </div>
+
+      <div class="policy-section">
+        <h2>৩. মেধা সম্পত্তি</h2>
+        <p>পরিষেবা এবং এর মূল বিষয়বস্তু, বৈশিষ্ট্য এবং কার্যকারিতা চিন্তক একাডেমি এবং এর লাইসেন্সধারীদের একচেটিয়া সম্পত্তি হিসেবে থাকবে।</p>
+      </div>
+
+      <div class="policy-section">
+        <h2>৪. সমাপ্তি</h2>
+        <p>আপনি শর্তাবলী লঙ্ঘন করলে আমরা কোনো পূর্ব নোটিশ বা দায়বদ্ধতা ছাড়াই অবিলম্বে আপনার অ্যাকাউন্ট বন্ধ বা স্থগিত করতে পারি।</p>
+      </div>
+
+      <div class="policy-section">
+        <h2>৫. দায়বদ্ধতার সীমাবদ্ধতা</h2>
+        <p>আপনার পরিষেবা ব্যবহারের ফলে কোনো পরোক্ষ, আনুষঙ্গিক, বিশেষ বা শাস্তিমূলক ক্ষতির জন্য কোনো অবস্থাতেই চিন্তক একাডেমি দায়ী থাকবে না।</p>
+      </div>
+
+      <div class="policy-section">
+        <h2>৬. প্রযোজ্য আইন</h2>
+        <p>এই শর্তাবলী বাংলাদেশের আইন অনুযায়ী পরিচালিত এবং ব্যাখ্যা করা হবে।</p>
+      </div>
+    `
   }
 };

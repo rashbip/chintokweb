@@ -70,7 +70,13 @@ const translations = {
     dont_have_acc: "Don't have an account?",
     link_signup: "Sign Up Now",
     placeholder_name: "Enter your name",
-    placeholder_email: "example@mail.com"
+    placeholder_email: "example@mail.com",
+    footer_privacy: "Privacy Policy",
+    footer_terms: "Terms of Service",
+    privacy_title: "Privacy Policy",
+    terms_title: "Terms of Service",
+    policy_last_updated: "Last Updated: January 2026",
+    back_to_home: "Back to Home"
   },
   bn: {
     page_title: "চিন্তক - ভাবতে শেখা",
@@ -143,6 +149,12 @@ const translations = {
     dont_have_acc: "অ্যাকাউন্ট নেই?",
     link_signup: "নতুন অ্যাকাউন্ট খুলুন",
     placeholder_name: "আপনার নাম লিখুন",
-    placeholder_email: "example@mail.com"
+    placeholder_email: "example@mail.com",
+    footer_privacy: "প্রাইভেসি পলিসি",
+    footer_terms: "শর্তাবলী",
+    privacy_title: "প্রাইভেসি পলিসি",
+    terms_title: "ব্যবহারের শর্তাবলী",
+    policy_last_updated: "সর্বশেষ আপডেট: জানুয়ারি ২০২৬",
+    back_to_home: "হোম পেজে ফিরে যান"
   }
 };

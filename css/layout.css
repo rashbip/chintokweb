@@ -106,6 +106,25 @@ footer {
   border-color: var(--primary);
 }
 
+.footer-links {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.footer-links a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: var(--transition);
+}
+
+.footer-links a:hover {
+  color: var(--primary);
+}
+
 .copyright {
   color: var(--text-muted);
   font-size: 0.9rem;
@@ -138,4 +157,3 @@ footer {
   background: var(--bg-primary);
   padding: 20px;
 }
-
